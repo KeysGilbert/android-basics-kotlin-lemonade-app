@@ -128,8 +128,7 @@ class MainActivity : AppCompatActivity() {
         } else if(lemonadeState == RESTART) {
             lemonadeState = SELECT
         }
-
-
+        setViewElements()
     }
 
     /**
