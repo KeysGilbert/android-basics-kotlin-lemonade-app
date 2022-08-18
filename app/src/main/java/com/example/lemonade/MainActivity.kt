@@ -114,7 +114,7 @@ class MainActivity : AppCompatActivity() {
         //  UI can reflect the correct state
         if(lemonadeState == SELECT) {
             lemonadeState = SQUEEZE //change state
-            lemonTree.pick()
+            lemonSize = lemonTree.pick() //the amount of times needed to squeeze the lemon
             squeezeCount = 0
         } else if(lemonadeState == SQUEEZE) {
             squeezeCount++
@@ -128,7 +128,7 @@ class MainActivity : AppCompatActivity() {
         } else if(lemonadeState == RESTART) {
             lemonadeState = SELECT
         }
-        setViewElements()
+        setViewElements() //update UI
     }
 
     /**
