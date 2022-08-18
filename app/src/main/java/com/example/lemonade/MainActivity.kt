@@ -128,6 +128,8 @@ class MainActivity : AppCompatActivity() {
         } else if(lemonadeState == RESTART) {
             lemonadeState = SELECT
         }
+
+
     }
 
     /**
@@ -143,6 +145,20 @@ class MainActivity : AppCompatActivity() {
         // TODO: Additionally, for each state, the lemonImage should be set to the corresponding
         //  drawable from the drawable resources. The drawables have the same names as the strings
         //  but remember that they are drawables, not strings.
+
+       if(lemonadeState == SELECT) {
+          textAction.text = "Click to select a lemon!"
+           lemonImage!!.setImageResource(R.drawable.lemon_tree)
+       } else if(lemonadeState == SQUEEZE) {
+           textAction.text = "Click to juice the lemon!"
+           lemonImage!!.setImageResource(R.drawable.lemon_squeeze)
+       } else if(lemonadeState == DRINK) {
+           textAction.text = "Click to drink your lemenade!"
+           lemonImage!!.setImageResource(R.drawable.lemon_drink)
+       } else if(lemonadeState == RESTART) {
+           textAction.text = "Click to start again!"
+           lemonImage!!.setImageResource(R.drawable.lemon_restart)
+       }
     }
 
     /**
